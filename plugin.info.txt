@@ -1,0 +1,7 @@
+base   dig
+author Andreas Gohr
+email  andi@splitbrain.org
+date   2010-06-28
+name   dig plugin
+desc   Query DNS for a list of domains
+url    http://www.dokuwiki.org/plugin:dig
