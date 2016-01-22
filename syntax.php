@@ -33,7 +33,7 @@ class syntax_plugin_dig extends DokuWiki_Syntax_Plugin {
         $this->Lexer->addSpecialPattern('<dig>\n.*?\n</dig>',$mode,'plugin_dig');
     }
 
-    function handle($match, $state, $pos, &$handler){
+    function handle($match, $state, $pos, Doku_Handler $handler){
 
         $lines = explode("\n",$match);
         array_shift($lines); // skip opening tag
@@ -43,7 +43,7 @@ class syntax_plugin_dig extends DokuWiki_Syntax_Plugin {
         return $data;
     }
 
-    function render($mode, &$R, $data) {
+    function render($mode, Doku_Renderer $R, $data) {
         if($mode != 'xhtml') return false;
 
         $R->doc .= '<table class="inline">';
